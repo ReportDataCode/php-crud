@@ -1,3 +1,6 @@
+<?php
+require("retrieve.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +20,23 @@
             <th>Access Role</th>
             <th>Actions</th>
         </tr>
+        <?php
+        
+        while ($row = mysqli_fetch_array($sqlUser)) { 
+            ?>
+            <tr>
+                <td>User 1</td>
+                <td>User Last</td>
+                <td>User Past</td>
+                <td>User Email</td>
+                <td>User gender</td>
+                <td>User role</td>
+                <td>Actions</td>
+                </tr>
+        <?php    
+        }
+        ?>
+        
     </table>
 </body>
 </html>
